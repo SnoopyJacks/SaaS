@@ -1,6 +1,6 @@
 /*-------Global Styles-------*/
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -119,4 +119,49 @@ body {
   width: 650px;
   margin: 0 auto 50px;
   animation: fadeUp 1.4s ease forwards;
+}
+
+/*-------Features-------*/
+.features {
+  padding: 120px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 80px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-card {
+  width: 340px;
+  background: rgba(30, 41, 59, 0.6);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  transition: 0.4s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.feature-card h3 {
+  margin-bottom: 20px;
+}
+
+.feature-card p {
+  color: #94a3b8;
+  font-size: 24px;
+}
+
+/*-------Pricing-------*/
+.pricing {
+  padding: 120px 0;
 }
