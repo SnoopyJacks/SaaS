@@ -57,3 +57,43 @@ body {
   align-items: center;
   z-index: 1000;
 }
+
+.nav-content {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #94a3b8;
+  margin-left: 20px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ff6a00, #ff8c42);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 106, 0, 0.4);
+}
