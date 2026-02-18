@@ -253,87 +253,72 @@ body {
 }
 
 /*-------Media Queries-------*/
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   .hero h1 {
-    font-size: 48px;
-    line-height: 60px;
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0 10px;
   }
 
   .hero p {
-    font-size: 18px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
   }
+}
 
-  .features-grid {
-    gap: 24px;
+@media (max-width: 600px) {
+  .faq-item {
+    width: 100%;
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 25px;
+  }
+}
+
+@media (max-width: 600px) {
   .navbar {
-    height: auto;
-    padding: 14px 0;
+    padding: 10px 0;
   }
 
   .nav-content {
     flex-direction: column;
-    gap: 12px;
-  }
-
-  .nav-links {
-    text-align: center;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    margin-right: 14px;
-    display: inline-block;
-  }
-
-  .hero {
-    padding-top: 140px;
-    padding-bottom: 110px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 24px;
-  }
-
-  .hero p {
-    font-size: 16px;
-    margin-bottom: 26px;
-  }
-
-  .feature-card,
-  .pricing-card {
-    width: 100%;
-    max-width: 520px;
+    gap: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .btn {
-    width: 100%;
-    text-align: center;
-    display: inline-block;
+@media (max-width: 600px) {
+  .blob1 {
+    width: 250px;
+    height: 250px;
+    top: 80px;
+    left: -60px;
   }
 
-  .nav-links {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links a {
-    margin: 8px 10px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-    line-height: 42px;
-  }
-
-  .price {
-    font-size: 40px;
+  .blob2 {
+    width: 300px;
+    height: 300px;
+    top: 350px;
+    right: -80px;
   }
 }
