@@ -1,6 +1,6 @@
 
-/* ------- Global Styles ------- */
 
+/* ------- Global ------- */
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +20,9 @@ body {
 
 .container {
   max-width: 1100px;
+  width: min(1100px, 92%);
   margin: 0 auto;
-  padding: 0 16px;
 }
-
-/* ------- Media / Images ------- */
 
 img,
 video,
@@ -35,10 +33,9 @@ svg {
 }
 
 /* ------- Blobs ------- */
-
 .blob {
   position: absolute;
-  border-radius: 9999px;
+  border-radius: 50%;
   filter: blur(120px);
   opacity: 0.4;
   z-index: -1;
@@ -46,23 +43,22 @@ svg {
 }
 
 .blob1 {
-  width: 380px;
-  height: 380px;
+  width: 400px;
+  height: 400px;
   background: #ff6a00;
-  top: 90px;
-  left: -120px;
+  top: 100px;
+  left: -100px;
 }
 
 .blob2 {
   width: 500px;
   height: 500px;
   background: #7c3aed;
-  top: 360px;
-  right: -160px;
+  top: 400px;
+  right: -150px;
 }
 
 /* ------- NavBar ------- */
-
 .navbar {
   position: fixed;
   inset: 0 0 auto 0;
@@ -76,10 +72,10 @@ svg {
 
 .nav-content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
 .logo {
@@ -90,12 +86,6 @@ svg {
   white-space: nowrap;
 }
 
-.nav-content .logo {
-  display: inline-flex;
-  align-items: center;
-}
-
-/* Desktop links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -115,7 +105,6 @@ svg {
   color: white;
 }
 
-/* Button */
 .btn {
   background: linear-gradient(135deg, #ff6a00, #ff8c42);
   padding: 12px 24px;
@@ -135,8 +124,11 @@ svg {
   box-shadow: 0 15px 35px rgba(255, 106, 0, 0.4);
 }
 
-/* ------- Hamburger  ------- */
+.nav-cta {
+  margin-left: 16px;
+}
 
+/* Hamburger  */
 .nav-toggle {
   display: none;
 }
@@ -161,18 +153,14 @@ svg {
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
+/* Desktop menu container */
 .nav-menu {
   display: flex;
   flex: 1;
   justify-content: flex-end;
 }
 
-.nav-cta {
-  margin-left: 16px;
-}
-
-/* ------- Hero Section ------- */
-
+/* ------- Hero ------- */
 .hero {
   padding-top: 180px;
   padding-bottom: 150px;
@@ -181,24 +169,23 @@ svg {
 
 .hero h1 {
   font-size: 64px;
-  line-height: 74px;
-  max-width: 650px;
-  margin: 0 auto 32px auto;
-  padding: 0 8px;
+  line-height: 80px;
+  max-width: 850px;
+  margin: 0 auto 50px auto;
+  padding: 0 10px;
   animation: fadeUp 1.4s ease forwards;
 }
 
 .hero p {
   font-size: 20px;
   color: #94a3b8;
-  max-width: 800px;
-  margin: 0 auto 32px;
-  padding: 0 8px;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  padding: 0 10px;
   animation: fadeUp 1.4s ease forwards;
 }
 
 /* ------- Features ------- */
-
 .features {
   padding: 120px 0;
 }
@@ -210,14 +197,12 @@ svg {
 }
 
 .features-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  justify-content: center;
 }
 
 .feature-card {
-  width: 340px;
   background: rgba(30, 41, 59, 0.6);
   padding: 40px;
   border-radius: 16px;
@@ -238,24 +223,21 @@ svg {
 .feature-card p {
   color: #94a3b8;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.6;
 }
 
 /* ------- Pricing ------- */
-
 .pricing {
   padding: 120px 0;
 }
 
 .pricing-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  justify-content: center;
 }
 
 .pricing-card {
-  width: 340px;
   padding: 50px 40px;
   border-radius: 16px;
   background: #111827;
@@ -286,15 +268,16 @@ svg {
 }
 
 /* ------- FAQ ------- */
-
 .faq {
   padding: 120px 0;
 }
 
 .faq-item {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto 20px auto;
   border-bottom: 1px solid #1f2937;
+  padding: 0 15px;
 }
 
 .faq-item input {
@@ -320,7 +303,6 @@ svg {
 }
 
 /* ------- Animations ------- */
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -332,58 +314,13 @@ svg {
   }
 }
 
-/* ------- Breakpoints  ------- */
-
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 48px;
-    line-height: 58px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  .section-title {
-    font-size: 32px;
-  }
-
-  .feature-card {
-    width: 320px;
-    padding: 32px;
-  }
-
-  .pricing-card {
-    width: 320px;
-  }
-
-  .blob1 {
-    width: 320px;
-    height: 320px;
-    left: -140px;
-  }
-
-  .blob2 {
-    width: 420px;
-    height: 420px;
-    right: -180px;
-  }
-}
-
+/* ------- Breakpoints ------- */
 @media (max-width: 600px) {
   .navbar {
     height: auto;
     padding: 10px 0;
   }
 
-  /* Hamburger visible on mobile */
-  .nav-toggle-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* CTA always visible (requires .nav-cta in HTML) */
   .logo {
     order: 1;
   }
@@ -399,10 +336,12 @@ svg {
 
   .nav-toggle-btn {
     order: 4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 10px;
   }
 
-  /* Dropdown */
   .nav-menu {
     order: 5;
     width: 100%;
@@ -438,88 +377,30 @@ svg {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .hero {
-    padding-top: 150px;
-    padding-bottom: 100px;
-  }
-
   .hero h1 {
-    font-size: 36px;
-    line-height: 44px;
-    max-width: 340px;
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .hero p {
     font-size: 16px;
-    max-width: 340px;
-  }
-
-  .features,
-  .pricing,
-  .faq {
-    padding: 90px 0;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-
-  .feature-card {
-    width: 340px;
-    padding: 32px;
-  }
-
-  .pricing-card {
-    width: 340px;
-    padding: 40px 25px;
   }
 
   .pricing-card.popular {
     transform: none;
   }
 
-  .price {
-    font-size: 36px;
-  }
-
   .blob1 {
-    width: 260px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
     top: 80px;
-    left: -150px;
+    left: -60px;
   }
 
   .blob2 {
-    width: 320px;
-    height: 320px;
-    top: 320px;
-    right: -190px;
-  }
-}
-
-@media (max-width: 380px) {
-  .btn {
-    padding: 10px 16px;
-    font-size: 13px;
-  }
-
-  .feature-card {
-    width: 320px;
-  }
-
-  .pricing-card {
-    width: 320px;
-  }
-
-  .hero h1 {
-    max-width: 320px;
-  }
-
-  .hero p {
-    max-width: 320px;
-  }
-
-  .faq-question {
-    font-size: 16px;
+    width: 300px;
+    height: 300px;
+    top: 350px;
+    right: -80px;
   }
 }
